@@ -1,0 +1,44 @@
+<!-- semua-event.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semua Event - Seloko Artspace</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-white text-black">
+
+  <header class="bg-black text-white px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center gap-4">
+      <i class="fas fa-search text-white text-lg"></i>
+      <img src="https://flagcdn.com/w40/id.png" alt="ID Flag" class="w-5 h-5 rounded-full">
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:underline">Beranda</a>
+      <a href="#" class="hover:underline">Hubungi Kami</a>
+      <a href="#" class="hover:underline">Buat Event</a>
+      <a href="semua-event.html" class="underline font-bold">Jelajah Event</a>
+    </nav>
+    <div class="text-lg md:text-xl font-bold font-[cursive] whitespace-nowrap">Seloko Artspace</div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <h1 class="text-2xl font-bold mb-6">Semua Event</h1>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      <!-- Card event bisa diulang -->
+      <div class="border rounded-lg overflow-hidden shadow">
+        <img src="https://via.placeholder.com/300x200" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h2 class="font-bold text-lg">Festival Musik</h2>
+          <p class="text-sm">📅 9 Agustus 2025</p>
+          <p class="text-sm">📍 Jambi</p>
+          <p class="text-sm font-semibold mt-1">Rp. 100.000</p>
+          <button class="bg-black text-white w-full mt-2 py-1 rounded">Beli Tiket</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
