@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seloko Artspace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    /* Custom font for logo */
+    .logo-font {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+      color: white;
+    }
+    /* Hide scrollbar for cards container */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Custom card shadow for event cards */
+    .card-shadow {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-shadow:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    /* Custom rounded for images */
+    .rounded-image {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Header / Navbar -->
+  <header class="bg-black text-white sticky top-0 z-30 flex items-center justify-between px-6 py-3 md:py-4">
+    <div class="flex items-center space-x-4">
+      <!-- Search Icon -->
+      <button aria-label="Cari" class="text-white hover:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+      <!-- Flag Icon -->
+      <img src="https://placehold.co/24x24/white/red/png" alt="Bendera Indonesia merah dan putih horizontal" class="w-6 h-6 rounded-sm" loading="lazy" onerror="this.style.display='none'"/>
+    </div>
+    <nav class="hidden md:flex space-x-10 font-semibold text-white select-none">
+      <a href="#" class="hover:text-gray-400 transition">Hubungi Kami</a>
+      <a href="#" class="hover:text-gray-400 transition">Buat Event</a>
+      <a href="#" class="hover:text-gray-400 transition">Jelajah Event</a>
+    </nav>
+    <div class="logo-font select-none tracking-wide cursor-default">Seloko Artspace</div>
+  </header>
+
+  <!-- Carousel Section Top -->
+  <section class="p-6 md:p-10 max-w-[1200px] mx-auto flex space-x-6 overflow-x-auto no-scrollbar">
+    <article class="min-w-[280px] md:min-w-[400px] rounded-image overflow-hidden shadow-lg card-shadow flex-shrink-0">
+      <img
+        src="https://placehold.co/400x200?text=Ad+Campaign+Arrow+Chart+Growing&bg=EAF4FF&txtclr=2978b5"
+        alt="Strategi kampanye iklan dengan panah merah naik dan catatan di kertas putih,"
+        class="w-full object-cover"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      />
+    </article>
+    <article class="min-w-[280px] md:min-w-[400px] rounded-image overflow-hidden shadow-lg card-shadow flex-shrink-0">
+      <img
+        src="https://placehold.co/400x200?text=Magnifying+Glass+On+ADS+Blue+Background&bg=bfdefa&txtclr=2a4d69"
+        alt="Kaca pembesar memfokuskan pada kata ADS dengan panah hitam mengarah dari sisi-sisinya di latar belakang biru,"
+        class="w-full object-cover"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      />
+    </article>
+  </section>
+
+  <!-- Carousel Dots -->
+  <div class="flex justify-center space-x-3 py-3">
+    <div class="w-3 h-3 bg-black rounded-full"></div>
+    <div class="w-3 h-3 bg-black rounded-full"></div>
+    <div class="w-3 h-3 bg-black rounded-full"></div>
+    <div class="w-3 h-3 bg-black rounded-full"></div>
+  </div>
+
+  <!-- Rekomendasi Event Section -->
+  <section class="max-w-[1200px] mx-auto px-6 pb-16">
+    <h2 class="font-bold text-lg mb-6 select-none">Rekomendasi Event</h2>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 justify-center">
+      <!-- Event Card Repeated 10x -->
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Temukan Event Dikotamu -->
+  <section class="max-w-[900px] mx-auto px-6 pb-12">
+    <h2 class="font-bold text-lg mb-6 select-none">Temukan Event Dikotamu</h2>
+    <div class="flex justify-center space-x-6">
+      <article class="w-28 h-40 bg-black rounded-xl card-shadow text-white flex flex-col items-center justify-center cursor-pointer select-none hover:bg-gray-900 transition">
+        <img src="https://placehold.co/120x120/87ceeb/ffffff/illustration-clouds-and-hills" alt="Ilustrasi gunung hijau bawah langit biru dengan awan putih" class="rounded-full mb-3" loading="lazy" onerror="this.style.display='none'"/>
+        <span class="font-semibold">Jambi</span>
+      </article>
+      <article class="w-28 h-40 bg-black rounded-xl card-shadow text-white flex flex-col items-center justify-center cursor-pointer select-none hover:bg-gray-900 transition">
+        <img src="https://placehold.co/120x120/87ceeb/ffffff/illustration-clouds-and-hills" alt="Ilustrasi gunung hijau bawah langit biru dengan awan putih" class="rounded-full mb-3" loading="lazy" onerror="this.style.display='none'"/>
+        <span class="font-semibold">Jakarta</span>
+      </article>
+      <article class="w-28 h-40 bg-black rounded-xl card-shadow text-white flex flex-col items-center justify-center cursor-pointer select-none hover:bg-gray-900 transition">
+        <img src="https://placehold.co/120x120/87ceeb/ffffff/illustration-clouds-and-hills" alt="Ilustrasi gunung hijau bawah langit biru dengan awan putih" class="rounded-full mb-3" loading="lazy" onerror="this.style.display='none'"/>
+        <span class="font-semibold">Jogja</span>
+      </article>
+      <article class="w-28 h-40 bg-black rounded-xl card-shadow text-white flex flex-col items-center justify-center cursor-pointer select-none hover:bg-gray-900 transition">
+        <img src="https://placehold.co/120x120/87ceeb/ffffff/illustration-clouds-and-hills" alt="Ilustrasi gunung hijau bawah langit biru dengan awan putih" class="rounded-full mb-3" loading="lazy" onerror="this.style.display='none'"/>
+        <span class="font-semibold">Medan</span>
+      </article>
+      <article class="w-28 h-40 bg-black rounded-xl card-shadow text-white flex flex-col items-center justify-center cursor-pointer select-none hover:bg-gray-900 transition">
+        <img src="https://placehold.co/120x120/87ceeb/ffffff/illustration-clouds-and-hills" alt="Ilustrasi gunung hijau bawah langit biru dengan awan putih" class="rounded-full mb-3" loading="lazy" onerror="this.style.display='none'"/>
+        <span class="font-semibold">Pekanbaru</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- Event Terlaris -->
+  <section class="bg-black text-white w-full py-10">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <h2 class="font-bold text-2xl mb-8 select-none">Event Terlaris</h2>
+      <div class="flex overflow-x-auto space-x-6 no-scrollbar">
+        <!-- Repeat event cards horizontally -->
+        <article class="min-w-[240px] rounded-xl bg-white text-black card-shadow flex flex-col flex-shrink-0 overflow-hidden">
+          <img
+            src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+            alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+            class="w-full object-cover aspect-[2/1]"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <div class="p-3">
+            <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+            <p class="text-xs text-gray-600 mb-1 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+              </svg><span>09 Agustus 2025</span>
+            </p>
+            <p class="text-xs text-gray-600 mb-2 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+              </svg><span>Jambi</span>
+            </p>
+            <p class="font-bold mb-3">Rp. 100.000</p>
+            <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+          </div>
+        </article>
+        <article class="min-w-[240px] rounded-xl bg-white text-black card-shadow flex flex-col flex-shrink-0 overflow-hidden">
+          <img
+            src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+            alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+            class="w-full object-cover aspect-[2/1]"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <div class="p-3">
+            <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+            <p class="text-xs text-gray-600 mb-1 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+              </svg><span>09 Agustus 2025</span>
+            </p>
+            <p class="text-xs text-gray-600 mb-2 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+              </svg><span>Jambi</span>
+            </p>
+            <p class="font-bold mb-3">Rp. 100.000</p>
+            <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+          </div>
+        </article>
+        <article class="min-w-[240px] rounded-xl bg-white text-black card-shadow flex flex-col flex-shrink-0 overflow-hidden">
+          <img
+            src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+            alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+            class="w-full object-cover aspect-[2/1]"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <div class="p-3">
+            <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+            <p class="text-xs text-gray-600 mb-1 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+              </svg><span>09 Agustus 2025</span>
+            </p>
+            <p class="text-xs text-gray-600 mb-2 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+              </svg><span>Jambi</span>
+            </p>
+            <p class="font-bold mb-3">Rp. 100.000</p>
+            <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+          </div>
+        </article>
+        <article class="min-w-[240px] rounded-xl bg-white text-black card-shadow flex flex-col flex-shrink-0 overflow-hidden">
+          <img
+            src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+            alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+            class="w-full object-cover aspect-[2/1]"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <div class="p-3">
+            <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+            <p class="text-xs text-gray-600 mb-1 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+              </svg><span>09 Agustus 2025</span>
+            </p>
+            <p class="text-xs text-gray-600 mb-2 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+              </svg><span>Jambi</span>
+            </p>
+            <p class="font-bold mb-3">Rp. 100.000</p>
+            <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+          </div>
+        </article>
+        <article class="min-w-[240px] rounded-xl bg-white text-black card-shadow flex flex-col flex-shrink-0 overflow-hidden">
+          <img
+            src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+            alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+            class="w-full object-cover aspect-[2/1]"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <div class="p-3">
+            <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+            <p class="text-xs text-gray-600 mb-1 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+              </svg><span>09 Agustus 2025</span>
+            </p>
+            <p class="text-xs text-gray-600 mb-2 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+              </svg><span>Jambi</span>
+            </p>
+            <p class="font-bold mb-3">Rp. 100.000</p>
+            <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Yang Akan Hadir -->
+  <section class="max-w-[1200px] mx-auto px-6 py-14">
+    <h2 class="font-bold text-lg mb-6 select-none">Yang Akan Hadir</h2>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 justify-center">
+      <!-- Duplicated event cards as before -->
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+      <article class="rounded-xl overflow-hidden bg-white card-shadow flex flex-col">
+        <img
+          src="https://placehold.co/400x160/000000/ffffff?text=Konser+Musik+Merah+di+Panggung"
+          alt="Panggung konser musik dengan pencahayaan merah dan penonton ramai"
+          class="w-full aspect-[2/1] object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <div class="p-3">
+          <h3 class="font-bold text-base mb-1">Festival Musik</h3>
+          <p class="text-xs text-gray-500 mb-1 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 7V3M16 7V3M3 11h18M5 11v10a2 2 0 002 2h10a2 2 0 002-2v-10" />
+            </svg><span>09 Agustus 2025</span>
+          </p>
+          <p class="text-xs text-gray-500 mb-2 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/>
+            </svg><span>Jambi</span>
+          </p>
+          <p class="font-bold mb-3">Rp. 100.000</p>
+          <button class="bg-black text-white text-sm rounded-full py-1 px-4 w-full hover:bg-gray-800 transition-shadow transition-colors select-none">Beli Tiket</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Button Lihat Lainnya -->
+  <div class="max-w-[1200px] mx-auto px-6 py-8 flex justify-center">
+    <button class="border-2 border-black rounded-full px-6 py-1 font-semibold text-black hover:bg-black hover:text-white transition select-none">Lihat Lainnya</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white w-full py-12 mt-auto">
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 select-none">
+      <div>
+        <h4 class="font-bold mb-3">Tentang</h4>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:underline">Tentang Kami</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-3">Kategori</h4>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:underline">Musik</a></li>
+          <li><a href="#" class="hover:underline">Olahraga</a></li>
+          <li><a href="#" class="hover:underline">Workshop</a></li>
+          <li><a href="#" class="hover:underline">Wisata</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-3">Informasi</h4>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:underline">Syarat & Ketentuan</a></li>
+          <li><a href="#" class="hover:underline">FAQ</a></li>
+          <li><a href="#" class="hover:underline">Tiket Gelang</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-3">Penyelenggara</h4>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:underline">Kreator</a></li>
+          <li><a href="#" class="hover:underline">Biaya</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-600 mt-10 pt-8 max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+      <div class="text-yellow-500 text-xl font-black tracking-widest select-none" aria-label="Logo Seloko Artspace with decorative pattern and text">
+        SEL0KO ARTSPACE
+      </div>
+      <div class="flex space-x-6 text-white text-xl cursor-pointer" aria-label="Social media links">
+        <a href="#" aria-label="WhatsApp" class="hover:text-yellow-400 transition"> 
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48a11.53 11.53 0 00-16.34 16.44l-1.58 5.11 5.22-1.54a11.44 11.44 0 0012.9-20.01zm-7.45 16.51a8.01 8.01 0 01-4.34-1.52l-.31-.23-3.36 1a1.27 1.27 0 01-1.49-1.58l1-3.37-.22-.33a8 8 0 1110.73 10.55 7.87 7.87 0 01-1.31.2z"/><path d="M15.67 13.3c-.21-.1-1.25-.62-1.45-.69a.58.58 0 00-.45 0c-.12.05-.44.69-.54.85s-.19.13-.35.05a4.98 4.98 0 01-1.47-.91 5.42 5.42 0 01-1-.86c-.14-.22-.06-.34 0-.4s.07-.12.1-.22a.92.92 0 00-.22-.67c-.19-.23-.46-.53-.63-.73s-.14-.27 0-.4a.56.56 0 00.36-.36c.12-.26.07-.44 0-.59s-.55-1.32-.76-1.8a.64.64 0 00-1-2c-.35-.13-1.41 1.33-1.41 3.26s1.44 3.78 1.64 4a10.21 10.21 0 002.94 3.65 11.11 11.11 0 003.68 1.77c.28.1.57.09.79 0s1.79-.73 2.05-1.44a1.7 1.7 0 00-.98-2.38z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="hover:text-yellow-400 transition"> 
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5a5.75 5.75 0 01-5.75-5.75v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.03 3.56a1.03 1.03 0 11-2.05 0 1.03 1.03 0 012.05 0zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" class="hover:text-yellow-400 transition"> 
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M14.89 5v2.26h-1.76c-1.11 0-1.33.53-1.33 1.31v1.73h3.05l-.4 3.1h-2.66V19h-3.23v-6.6H7v-3.1h2.26V7.19c0-2.23 1.36-3.45 3.35-3.45.95 0 1.76.07 2 .1z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok" class="hover:text-yellow-400 transition"> 
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 256 256"><path d="M188.7 48a55.88 55.88 0 01-36.8-13.4v103.2a48 48 0 11-25.9-11.88V0h23.75a64 64 0 004.15 16.77 58.68 58.68 0 001.95 5.16c1 2.76 3.18 11.95 22.85 13.4z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube" class="hover:text-yellow-400 transition"> 
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 512 512"><path d="M508.1 129.3c-6.1-23-24.1-41.07-47.58-47.72C418.5 72 256 72 256 72s-162.48 0-204.58 9.57c-23.47 6.65-41.47 24.72-47.58 47.72C0 171.2 0 256 0 256s0 84.8 3.84 126.7c6.1 23 24.1 41.07 47.58 47.72C93.5 440 256 440 256 440s162.5 0 204.5-9.57c23.5-6.65 41.5-24.72 47.6-47.72 3.8-41.9 3.8-126.7 3.8-126.7s0-84.8-3.8-126.7zM208 336V176l144 80-144 80z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
